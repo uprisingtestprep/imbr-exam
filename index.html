@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Internal Medicine Board Review Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="gate" id="gate">
+      <div>
+        <p class="eyebrow">Uprising Test Prep</p>
+        <h1>Internal Medicine Board Review Simulator</h1>
+        <p>240 single-best-answer questions, drawn from a pool of 2,000.</p>
+      </div>
+      <label>
+        Access code
+        <input id="accessCode" autocomplete="off" inputmode="text" value="">
+      </label>
+      <button id="start" type="button">Start simulated exam</button>
+      <p class="error" id="gateError"></p>
+    </section>
+
+    <section id="exam" hidden>
+      <header class="topbar">
+        <div>
+          <p class="eyebrow" id="domain">Question</p>
+          <h1 id="counter">1 of 240</h1>
+        </div>
+        <div class="timer" id="timer">08:00:00</div>
+      </header>
+      <article class="question-panel">
+        <p id="stem"></p>
+        <div id="options" class="options"></div>
+      </article>
+      <nav class="controls">
+        <button id="prev" type="button">Previous</button>
+        <button id="flag" type="button">Flag</button>
+        <button id="next" type="button">Next</button>
+        <button id="submit" type="button" class="submit">Finish exam</button>
+      </nav>
+    </section>
+
+    <section id="results" class="results" hidden></section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

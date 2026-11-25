@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Internal Medicine Board Review Flashcards</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <p class="eyebrow">Uprising Test Prep</p>
+        <h1>Internal Medicine Flashcards</h1>
+      </div>
+      <div class="counter" id="counter">Loading cards</div>
+    </header>
+
+    <section class="controls" aria-label="Flashcard controls">
+      <button id="prev" type="button">Previous</button>
+      <button id="flip" type="button" class="primary">Show answer</button>
+      <button id="next" type="button">Next</button>
+      <button id="shuffle" type="button">Shuffle</button>
+    </section>
+
+    <section class="scene" id="scene" aria-live="polite">
+      <article class="card" id="card">
+        <section class="face front">
+          <p class="label" id="domain">Domain</p>
+          <div class="content" id="front">Loading flashcards...</div>
+          <p class="hint">Click the card or press Space to reveal the answer.</p>
+        </section>
+        <section class="face back">
+          <p class="label">Answer</p>
+          <div class="content" id="back"></div>
+          <p class="hint">Use the arrow keys to move between cards.</p>
+        </section>
+      </article>
+    </section>
+
+    <footer>
+      <span>Space: flip</span>
+      <span>Left or Right: move</span>
+      <span>S: shuffle</span>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
